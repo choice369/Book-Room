@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Dropdown } from 'antd';
 import "./index.css";
@@ -76,6 +76,64 @@ const items = [
   },
 ];
 
+const itemNotify = [
+  {
+    key: "5",
+    label:
+    <div className='box-notify header-notify'>
+      <div className='inner-header'>
+        <BellOutlined className='icon-notify'/>
+        <div>Notification</div>
+      </div>
+      <div className='view-header'>View all</div>
+    </div>
+  },
+  {
+    key: "1",
+    label: 
+    <div className='box-notify mail-box'>
+      <MailOutlined className='icon-notify icon-mail'/>
+      <div className='content-header'>
+        <div>You received a new message</div>
+        <div className='timing'>8 hours ago</div>
+      </div>
+    </div>
+  },
+  {
+    key: "2",
+    label:
+    <div className='box-notify user-box'>
+      <UserAddOutlined className='icon-notify icon-user'/>
+      <div className='content-header'>
+        <div>New user registered</div>
+        <div className='timing'>9 hours ago</div>
+      </div>
+    </div>
+  },
+  {
+    key: "3",
+    label:
+    <div className='box-notify warning-box'>
+      <WarningOutlined className='icon-notify icon-warning'/>
+      <div className='content-header'>
+        <div>System alert</div>
+        <div className='timing'>12 hours ago</div>
+      </div>
+    </div>
+  },
+  {
+    key: "4",
+    label:
+    <div className='box-notify loading-box'>
+      <Loading3QuartersOutlined className='icon-notify icon-loading'/>
+      <div className='content-header'>
+        <div>You have a new update</div>
+        <div className='timing'>1 days ago</div>
+      </div>
+    </div>
+  }
+]
+
 function LayoutDefault(){
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [widthSider, setWidthSider] = useState(256);
@@ -100,7 +158,7 @@ function LayoutDefault(){
               <BarsOutlined onClick={handleBar}/>
               <SearchOutlined style={{marginLeft: "20px"}}/>
             </div>
-            <Dropdown menu={{ items }} placement="bottomRight" arrow>
+            <Dropdown menu={{ items: itemNotify }} placement="bottomRight" arrow>
               <BellOutlined className='item-header-2' style={{marginRight: 10}}/>
             </Dropdown>
           </div>
