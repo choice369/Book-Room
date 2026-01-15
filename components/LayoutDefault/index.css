@@ -1,0 +1,26 @@
+header .box-header{
+  display: flex;
+  flex: 1;
+}
+header .box-header .item-header{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+header .box-header .item-header .item-header-1{
+  margin-left: 80px;
+  font-size: 24px;
+}
+header .box-header .item-header .item-header-2{
+  font-size: 24px;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+.img-80{
+  padding: 0;
+}
+header .box-header .item-header .item-header-1.img-80{
+  margin-left: 0;
+}
