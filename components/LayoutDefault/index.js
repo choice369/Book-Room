@@ -1,11 +1,11 @@
 import { Layout } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined, CodepenOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Dropdown } from 'antd';
 import "./index.css";
-import Box from '../Box';
+import Box from '../Booking';
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 const { Header, Footer, Sider, Content } = Layout;
 
 const items = [
@@ -66,14 +66,10 @@ const items = [
     ],
   },
   {
-    key: 'grp',
-    label: 'Group',
-    type: 'group',
-    children: [
-      { key: '13', label: 'Option 13' },
-      { key: '14', label: 'Option 14' },
-    ],
-  },
+    key: "sub5",
+    label: <Link to={"/booking-room"}>Book Room</Link>,
+    icon: <CodepenOutlined />
+  }
 ];
 
 const itemNotify = [

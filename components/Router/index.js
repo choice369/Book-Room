@@ -1,4 +1,4 @@
-import Box from "../Box";
+import Box from "../Booking";
 import LayoutDefault from "../LayoutDefault";
 
 export const routes = [
@@ -7,7 +7,7 @@ export const routes = [
     element: <LayoutDefault/>,
     children: [
       {
-        path: "/box",
+        path: "/booking-room",
         element: <Box/>
       }
     ]
