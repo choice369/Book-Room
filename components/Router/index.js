@@ -1,6 +1,7 @@
 import Box from "../Booking";
 import Creating from "../Creating";
 import LayoutDefault from "../LayoutDefault";
+import Dashboard from "../Dashboard";
 
 export const routes = [
   {
@@ -14,6 +15,10 @@ export const routes = [
       {
         path: "/creating-room",
         element: <Creating/>
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard/>
       }
     ]
   }

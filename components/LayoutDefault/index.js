@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined, CodepenOutlined, PlusOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined, CodepenOutlined, PlusOutlined, HomeOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Dropdown } from 'antd';
 import "./index.css";
@@ -74,6 +74,11 @@ const items = [
     key: "sub6",
     label: <Link to={"/creating-room"}>Create Room</Link>,
     icon: <PlusOutlined />
+  },
+  {
+    key: "sub7",
+    label: <Link to={"/dashboard"}>Dashboard</Link>,
+    icon: <HomeOutlined />
   }
 ];
 
