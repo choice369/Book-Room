@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined, CodepenOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined, SettingOutlined, BarsOutlined, SearchOutlined, BellOutlined, UserAddOutlined, WarningOutlined, Loading3QuartersOutlined, CodepenOutlined, PlusOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Dropdown } from 'antd';
 import "./index.css";
@@ -69,6 +69,11 @@ const items = [
     key: "sub5",
     label: <Link to={"/booking-room"}>Book Room</Link>,
     icon: <CodepenOutlined />
+  },
+  {
+    key: "sub6",
+    label: <Link to={"/creating-room"}>Create Room</Link>,
+    icon: <PlusOutlined />
   }
 ];
 
@@ -170,7 +175,7 @@ function LayoutDefault(){
             items={items}
           />
         </Sider>
-        <Content style={{ flex: 1}}>
+        <Content style={{ flex: 1, padding: 20}}>
           <Outlet/>
         </Content>
       </Layout>
